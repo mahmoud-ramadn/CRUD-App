@@ -12,7 +12,7 @@ export const editPost = createAsyncThunk(
   async (item, ThunkAPI) => {
     const { rejectWithValue } = ThunkAPI;
     try {
-      const res = await fetch(`http://localhost:5000/posts/${item.id}`, {
+      const res = await fetch(`https://crud-app-server-2betib8gf-mahmoud-ramadans-projects.vercel.app/posts/${item.id}`, {
         method: "PATCH",
         body: JSON.stringify(item),
         headers: {
@@ -34,7 +34,7 @@ export const fetchPosts = createAsyncThunk(
   async (_, ThunkAPI) => {
     const { rejectWithValue } = ThunkAPI;
     try {
-      const res = await fetch("http://localhost:5000/posts");
+      const res = await fetch("https://crud-app-server-2betib8gf-mahmoud-ramadans-projects.vercel.app/posts");
       const data = await res.json();
 
       return data;
@@ -49,7 +49,7 @@ export const getPost = createAsyncThunk(
   async (id, ThunkAPI) => {
     const { rejectWithValue } = ThunkAPI;
     try {
-      const res = await fetch(`http://localhost:5000/posts/${id}`);
+      const res = await fetch(`https://crud-app-server-2betib8gf-mahmoud-ramadans-projects.vercel.app/posts/${id}`);
 
       const data = await res.json();
 
@@ -66,7 +66,7 @@ export const deletePost = createAsyncThunk(
   async (id, ThunkAPI) => {
     const { rejectWithValue } = ThunkAPI;
     try {
-      await fetch(`http://localhost:5000/posts/${id}`, {
+      await fetch(`https://crud-app-server-2betib8gf-mahmoud-ramadans-projects.vercel.app/posts/${id}`, {
         method: "DELETE",
       });
       return id;
@@ -83,7 +83,7 @@ export const insetPost = createAsyncThunk(
     const { auth } = getState();
 
     try {
-      const res = await fetch("http://localhost:5000/posts", {
+      const res = await fetch("https://crud-app-server-2betib8gf-mahmoud-ramadans-projects.vercel.app/posts", {
         method: "POST",
         body: JSON.stringify(item),
         headers: {
