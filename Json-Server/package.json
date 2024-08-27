@@ -1,9 +1,9 @@
 {
   "name": "crud-redux-router-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/server.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 5000",
+    "start": "node api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
