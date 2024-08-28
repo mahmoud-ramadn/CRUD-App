@@ -17,8 +17,8 @@ const Details = () => {
   return (
     <div>
       <Loading error={error}  loading={loading} >
-        <p>Title { record?.title}</p>
-        <p>Title { record?.description}</p>
+        <p>Title :{ record?.title}</p>
+        <p>description: { record?.description}</p>
 </Loading>
 
     </div>
